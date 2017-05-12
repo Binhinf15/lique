@@ -9,7 +9,7 @@
 <body>
 
 <div>
-	<table border="1" class="zptabledata">
+	<table border="1" class="tabledata">
 		<thead>
 			<tr style="color: #333333; background-color: #0082D7">
 				<th>Id</th>
@@ -19,7 +19,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each=" mitarbeiter : ${mitarbeiterListe}" style="color: #6C6C6C; background-color: #EDEDED">
+			<tr th:each=" kunden : ${KundenListe}" style="color: #6C6C6C; background-color: #EDEDED">
 				<td>
 					<form action="/kundenDetail">
 						<input type="submit" th:value="${kunden.id}" name="kundenId">
