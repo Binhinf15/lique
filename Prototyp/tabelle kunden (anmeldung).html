@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+<div>
+	<table border="1" class="zptabledata">
+		<thead>
+			<tr style="color: #333333; background-color: #0082D7">
+				<th>Id</th>
+				<th>Vorname</th>
+				<th>Nachname</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each=" mitarbeiter : ${mitarbeiterListe}" style="color: #6C6C6C; background-color: #EDEDED">
+				<td>
+					<form action="/kundenDetail">
+						<input type="submit" th:value="${kunden.id}" name="kundenId">
+					</form>
+				</td>
+				<td th:text="${kunden.vorname}"></td>
+				<td th:text="${kunden.Nachname}"></td>
+				<td th:text="${kunden.userAccount.username}"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+</body>
+
+</html>
